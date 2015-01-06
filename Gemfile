@@ -19,9 +19,12 @@ gem 'pg'
 gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'activerecord-tableless', '< 2'
+gem 'google_drive'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'shellany'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rails'

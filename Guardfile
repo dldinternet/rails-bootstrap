@@ -38,6 +38,7 @@ end
 guard 'rails' do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
+  watch(%r{^app/controllers/.*\.rb})
 end
 
 
@@ -50,8 +51,8 @@ end
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec" do
-  require "guard/rspec/dsl"
+guard :rspec, cmd: 'bundle exec rspec' do
+  require 'guard/rspec/dsl'
   dsl = Guard::RSpec::Dsl.new(self)
 
   # Feel free to open issues for suggestions and improvements

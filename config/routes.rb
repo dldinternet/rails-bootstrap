@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
+  # get '/pages/*id' => 'pages#show'
+  root to: 'visitors#new'
 end
