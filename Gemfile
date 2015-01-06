@@ -22,6 +22,7 @@ gem 'unicorn-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
+  gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
@@ -41,6 +42,9 @@ group :development, :test do
 end
 group :test do
   gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'spork'
+  # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
